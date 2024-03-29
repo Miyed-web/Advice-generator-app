@@ -1,8 +1,9 @@
 const quote = document.querySelector(".quote");
 const adviceId = document.querySelector(".adviceId");
 const btn = document.querySelector(".btn");
+const url = "https://api.adviceslip.com/advice";
 async function adviceGenerator(){
-  let respond = await fetch("https://api.adviceslip.com/advice");
+  let respond = await fetch(url);
  let json = await respond.json()
  
   console.log(json);
